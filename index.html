@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Learn With Me</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="content">
+
+   <div id="home" class="page">
+
+<div class="hero">
+
+<img src="image/arduino.jpg" class="hero-img">
+
+<h1>🤖 RoboLearn</h1>
+
+<h2>Learn Robotics, Electronics & AI</h2>
+
+<p>
+Learn Arduino, Electronics, Sensors, Motors,
+Artificial Intelligence and Robotics Projects
+through interactive lessons.
+</p>
+
+<button class="startBtn"
+onclick="showPage('library')">
+
+🚀 Start Learning
+
+</button>
+
+</div>
+
+<div class="features">
+
+<div class="card">
+<h2>📚</h2>
+<h3>25+</h3>
+<p>Robotics Lessons</p>
+</div>
+
+<div class="card">
+<h2>🤖</h2>
+<h3>AI</h3>
+<p>Robot Teacher</p>
+</div>
+
+<div class="card">
+<h2>📝</h2>
+<h3>100+</h3>
+<p>Quiz Questions</p>
+</div>
+
+<div class="card">
+<h2>🚀</h2>
+<h3>10+</h3>
+<p>Projects</p>
+</div>
+
+</div>
+
+</div>
+    </div>
+
+
+    <div class="stats">
+
+        <div class="card">
+            <h2>25+</h2>
+            <p>Robotics Lessons</p>
+        </div>
+
+        <div class="card">
+            <h2>100+</h2>
+            <p>Quiz Questions</p>
+        </div>
+
+        <div class="card">
+            <h2>10+</h2>
+            <p>Projects</p>
+        </div>
+
+        <div class="card">
+            <h2>AI</h2>
+            <p>Robot Assistant</p>
+        </div>
+
+    </div>
+
+
+
+</div>
+    <div id="assistant" class="page">
+
+<div class="chatContainer">
+
+<h1>🤖 RoboLearn AI Teacher</h1>
+
+<div class="robotMessage">
+🤖 Hello! I'm RoboLearn AI.<br><br>
+Ask me anything about Robotics, Arduino, Sensors,
+Electronics or Artificial Intelligence.
+</div>
+
+<div class="suggestions">
+
+<button onclick="fillQuestion('What is Arduino?')">
+Arduino
+</button>
+
+<button onclick="fillQuestion('What is Servo Motor?')">
+Servo
+</button>
+
+<button onclick="fillQuestion('What is Ultrasonic Sensor?')">
+Ultrasonic
+</button>
+
+<button onclick="fillQuestion('How to make a robot?')">
+Robot
+</button>
+
+</div>
+
+<div id="chatBox"></div>
+
+<div class="typing" id="typing">
+🤖 RoboLearn AI is typing...
+</div>
+
+<div class="inputArea">
+
+<input
+type="text"
+id="question"
+placeholder="Ask your robotics question...">
+
+<button onclick="askRobot()">
+Send
+</button>
+
+</div>
+
+</div>
+
+
+    </div>
+
+    <div id="library" class="page">
+
+<h1>📚 Robotics Library</h1>
+
+<input
+type="text"
+id="searchBox"
+placeholder="🔍 Search components..."
+onkeyup="searchLibrary()">
+
+<div class="libraryGrid">
+
+<div class="lessonCard">
+<img src="image/arduino.jpg">
+<h2>Arduino UNO</h2>
+<p>Microcontroller Board</p>
+<button>Open Lesson</button>
+</div>
+
+<div class="lessonCard">
+<img src="image/image servo.jpg">
+<h2>Servo Motor</h2>
+<p>Precise Angle Control</p>
+<button>Open Lesson</button>
+</div>
+
+<div class="lessonCard">
+<img src="image/image ultrasonic.jpg.png">
+<h2>Ultrasonic Sensor</h2>
+<p>Distance Measurement</p>
+<button>Open Lesson</button>
+</div>
+
+<div class="lessonCard">
+<img src="image/arduino.jpg">
+<h2>Bluetooth HC-05</h2>
+<p>Wireless Communication</p>
+<button>Coming Soon</button>
+</div>
+
+<div class="lessonCard">
+<img src="image/arduino.jpg">
+<h2>IR Sensor</h2>
+<p>Obstacle Detection</p>
+<button>Coming Soon</button>
+</div>
+
+<div class="lessonCard">
+<img src="image/arduino.jpg">
+<h2>LDR Sensor</h2>
+<p>Light Detection</p>
+<button>Coming Soon</button>
+</div>
+
+
+
+    </div>
+
+    <div id="quiz" class="page" style="display:none;">
+        <h1>📝 Quiz</h1>
+
+        <p id="quizQuestion">
+            Which sensor measures distance?
+        </p>
+
+        <button onclick="correctAnswer()">Ultrasonic Sensor</button>
+        <button onclick="wrongAnswer()">LDR</button>
+
+        <p id="quizResult"></p>
+    </div>
+
+    <div id="achievement" class="page" style="display:none;">
+        <h1>🏆 Achievements</h1>
+        <h2 id="badgeCount">Badges: 0</h2>
+    </div>
+
+    <div id="projects" class="page" style="display:none;">
+        <h1>🚀 Projects</h1>
+
+        <h3>RFID Attendance Robot</h3>
+        <p>Automatic attendance system using RFID cards.</p>
+
+        <h3>Bluetooth Car</h3>
+        <p>Control a robot car using a phone.</p>
+
+        <h3>Obstacle Avoiding Robot</h3>
+        <p>Uses ultrasonic sensors to avoid obstacles.</p>
+
+    </div>
+    <div id="about" class="page" style="display:none;">
+    <h1>👨‍💻 ABOUT THIS WEB creator</h1>
+
+     <img src="image/IMG-20260201-WA0148.jpg" width="220">
+
+
+    <h2>profational & Robotics Enthusiast</h2>
+
+    <p>
+        Rashid PG is a student from india  who is passionate about
+        robotics, electronics, and innovation.
+    </p>
+
+    <p>
+        He enjoys building robot cars, 
+        automation projects, and learning new technologies.
+    </p>
+
+    <p>
+        Goal: To help children learn robotics in a simple and fun way.
+    </p>
+
+    <p>
+        he inoveted some cool inventions such as RFID attentence system 
+    </p>
+
+    <p>The web is created by mr.RASHID PG.</p>
+</div>
+
+</div>
+
+<div class="navbar">
+    <button onclick="showPage('home')">🏠</button>
+    <button onclick="showPage('assistant')">🤖</button>
+    <button onclick="showPage('library')">📚</button>
+    <button onclick="showPage('quiz')">📝</button>
+    <button onclick="showPage('achievement')">🏆</button>
+    <button onclick="showPage('projects')">🚀</button>
+    <button onclick="showPage('about')">👨‍💻</button>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
